@@ -21,7 +21,7 @@ if(isPlayer _source && _source isKindOf "Man") then{
 };
 
 if(((_curMag in ["30Rnd_65x39_caseless_mag","100Rnd_65x39_caseless_mag","30Rnd_45ACP_Mag_SMG_01"]))
-	OR (_curWep in ["hgun_P07_F","hgun_P07_snds_F","srifle_DMR_03_F","hgun_Pistol_heavy_01_MRD_F"])) then {
+	OR (_curWep in ["hgun_P07_F","hgun_P07_snds_F","srifle_DMR_03_F","SMG_02_F"])) then {
     if((((getDammage _unit) + _damage) >= 0.9) OR (_damage >= 0.95)) then {
     	_damage	= 0;
 		[_unit,_source] spawn life_fnc_tazed;
