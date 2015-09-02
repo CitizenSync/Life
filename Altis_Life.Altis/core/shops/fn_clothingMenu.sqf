@@ -2,7 +2,7 @@
 /*
 	File: fn_clothingMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
@@ -31,7 +31,7 @@ disableSerialization;
 ctrlSetText [3103,localize _shopTitle];
 
 //Cop / Civ Pre Check
-if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
+if((SEL(_this,3) in ["airman","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
 if((SEL(_this,3) == "reb" && !license_civ_rebel)) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
 if((SEL(_this,3) in ["cop"] && playerSide != west)) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
 if((SEL(_this,3) in ["dive"] && !license_civ_dive)) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
@@ -58,8 +58,8 @@ _ut5 attachTo [_testLogic,[0,0,0]];
 _ut5 setObjectTexture [0,"a3\map_data\gdt_concrete_co.paa"];
 detach _ut5;
 _ut5 setVectorDirAndUp [[0,0,-.33],[0,.33,0]];
-_light = "#lightpoint" createVehicleLocal [1000,1000,10000];   
-_light setLightBrightness 1;  
+_light = "#lightpoint" createVehicleLocal [1000,1000,10000];
+_light setLightBrightness 1;
 _light setLightAmbient [1.0, 1.0, 1.0];
 _light lightAttachObject [_ut1, [0,0,10]];
 
@@ -146,11 +146,11 @@ if(isNil "life_clothesPurchased") exitWith {
 			};
 		};
 	};
-	
+
 	if(count life_oldUniformItems > 0) then {
 		{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldUniformItems;
 	};
-	
+
 	if(vest player != "") then {
 		if(life_oldVest == "") then {
 			removeVest player;
