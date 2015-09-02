@@ -2541,14 +2541,14 @@ class Mission
 				class Item35
 				{
 					position[]={16812.797,18.936867,12574.453};
-					azimut=-175.05363;
+					azimut=-175.054;
 					offsetY=0.60000002;
 					special="NONE";
 					id=132;
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""airman""];";
 				};
 				class Item36
 				{
@@ -2622,13 +2622,13 @@ class Mission
 				class Item42
 				{
 					position[]={3365.2139,4.8839612,13067.412};
-					azimut=-287.84036;
+					azimut=-287.84;
 					special="NONE";
 					id=139;
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""airman""];";
 				};
 				class Item43
 				{
@@ -2714,13 +2714,13 @@ class Mission
 				class Item50
 				{
 					position[]={25728.273,20.57786,21355.506};
-					azimut=-417.82663;
+					azimut=-417.827;
 					special="NONE";
 					id=147;
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""airman""];";
 				};
 				class Item51
 				{
@@ -2942,14 +2942,14 @@ class Mission
 				class Item70
 				{
 					position[]={14016.063,26.501719,18715.143};
-					azimut=-329.13535;
+					azimut=-329.13501;
 					offsetY=0.30000001;
 					special="NONE";
 					id=167;
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""airman""];";
 				};
 				class Item71
 				{
