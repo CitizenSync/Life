@@ -11641,7 +11641,7 @@ class Mission
 		class Item189
 		{
 			position[]={14199.669,34.694031,18907.166};
-			name="hospital_2";
+			name="medic1";
 			text="Medic";
 			type="loc_Hospital";
 			colorName="ColorRed";
