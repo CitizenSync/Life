@@ -343,6 +343,10 @@ class Life_Client_Core
 		class safeOpen {};
 		class safeTake {};
 		class safeFix {};
+		class bankInventory {};
+		class vaultOpen {};
+		class bankTake {};
+		class bankFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
 		class wireTransfer {};
