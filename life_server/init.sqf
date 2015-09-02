@@ -132,10 +132,6 @@ life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT
 fed_bank setVariable ["safe",count playableUnits,true];
 [] spawn TON_fnc_federalUpdate;
 
-/* Set the amount of goldcoins in the Bank Robbery at mission start */
-town_bank setVariable ["vault", count playableUnits,true];
-[] spawn TON_fnc_bankUpdate;
-
 /* Event handler for disconnecting players */
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}];
 [] call compile PreProcessFileLineNumbers "\life_server\functions.sqf";
@@ -172,17 +168,6 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-
-/* Setup the Bank robbery building(s) */
-private["_bank","_lmc"];
-_bank = nearestObject [[20950,16856],"Land_i_Shop_01_V1_F"];
-_lmc = nearestObject [[20950,16856],"Land_MetalCase_01_large_F"];
-
-for "_i" from 1 to 3 do {_bank setVariable[format["bis_disabled_Door_%1",_i],1,true]_bank animate [ format["Door_%1_rot",_1],0];};
-
-_lmc setVariable["bis_disabled_Door_%1",1,true];
-_lmc allowDamage false;
-_bank allowDamage false;
 
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
