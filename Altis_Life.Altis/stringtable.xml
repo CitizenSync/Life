@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
 	<Package name="Shop_Names">
-		<Key ID="STR_Shops_C_Bruce">
-			<Original>Bruce's Outback Outfits</Original>
+		<Key ID="STR_Shops_C_Airman">
+			<Original>Airman's Fashionable Outfits</Original>
 		</Key>
 		<Key ID="STR_Shops_C_Police">
 			<Original>Altis Police Department Shop</Original>
@@ -11,10 +11,10 @@
 			<Original>Rebel Outpost</Original>
 		</Key>
 		<Key ID="STR_Shops_C_Diving">
-			<Original>Steve's Diving Shop</Original>
+			<Original>Deathtax's Diving Shop</Original>
 		</Key>
 		<Key ID="STR_Shops_C_Kart">
-			<Original>Bobby's Kart-Racing Outfits</Original>
+			<Original>Hoppy's Kart-Racing Outfits</Original>
 		</Key>
 		<Key ID="STR_Shops_Market">
 			<Original>Altis Market</Original>
@@ -47,7 +47,7 @@
 			<French>Café de Gyro</French>
 		</Key>
 		<Key ID="STR_Shops_DrugDealer">
-			<Original>Tonic's Narcotics</Original>
+			<Original>Galahad's Illict Narcotics</Original>
 			<German>Drogendealer</German>
 			<Italian>Spacciatore</Italian>
 			<French>Dealer de Drogue</French>
