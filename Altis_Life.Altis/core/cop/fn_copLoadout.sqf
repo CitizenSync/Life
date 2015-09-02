@@ -53,7 +53,5 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemGPS";
 player assignItem "ItemGPS";
-player addItem "Binocular";
-player assignItem "Binocular";
 
 [] call life_fnc_saveGear;
