@@ -138,7 +138,7 @@ class Clothing {
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
-			{ "G_Diving", "DIVE GEAR", 500, { "", "", -1 } }
+			{ "G_Diving", "DIVE GEAR", 500, { "", "", -1 } },
 			{ "G_Shades_Black", "", 25, { "", "", -1 } },
 			{ "G_Shades_Blue", "", 20, { "", "", -1 } },
 			{ "G_Sport_Blackred", "", 20, { "", "", -1 } },
