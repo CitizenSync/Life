@@ -3070,6 +3070,9 @@
 			<Italian>Bottiglia d'acqua</Italian>
 			<Portuguese>Garrafa d'água</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Defibrillator">
+			<Original>Defibrillator</Original>
+		</Key>
 		<Key ID="STR_Item_Coffee">
 			<Original>Coffee</Original>
 			<German>Kaffee</German>
