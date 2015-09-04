@@ -1,7 +1,7 @@
 #include <macro.h>
 /*
 	Author Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Once word is received by the server the rest of the jail execution is completed.
 */
@@ -26,19 +26,23 @@ _bail = false;
 
 while {true} do
 {
+	player allowDamage false;
 	if((round(_time - time)) > 0) then {
 		_countDown = [(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString;
 		hintSilent parseText format[(localize "STR_Jail_Time")+ "<br/> <t size='2'><t color='#FF0000'>%1</t></t><br/><br/>" +(localize "STR_Jail_Pay")+ " %3<br/>" +(localize "STR_Jail_Price")+ " $%2",_countDown,[life_bail_amount] call life_fnc_numberText,if(isNil "life_canpay_bail") then {"Yes"} else {"No"}];
 	};
-	
-	if(player distance (getMarkerPos "jail_marker") > 60) exitWith {
-		_esc = true;
+
+	if(player distance (getMarkerPos "jail_marker") > 38) then
+	{
+		systemChat "The guards would really like it if you stayed inside the prison";
+		player setPos (getMarkerPos "jail_marker");
+		//_esc = true; (sets player as escaped)
 	};
-	
+
 	if(life_bail_paid) exitWith {
 		_bail = true;
 	};
-	
+
 	if((round(_time - time)) < 1) exitWith {hint ""};
 	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
 	sleep 0.1;
@@ -56,7 +60,7 @@ switch (true) do
 		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] call life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
-	
+
 	case (_esc): {
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
@@ -64,7 +68,7 @@ switch (true) do
 		[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
-	
+
 	case (alive player && !_esc && !_bail): {
 		life_is_arrested = false;
 		hint localize "STR_Jail_Released";
