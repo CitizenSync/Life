@@ -2,7 +2,7 @@
 /*
 	File: fn_revivePlayer.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Starts the revive process on the player.
 */
@@ -31,13 +31,16 @@ _titleText ctrlSetText format["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
+// Makes it so you can only revive players with a name
+if(_targetName == "Unknown") exitWith {};
+
 //Lets reuse the same thing!
 while {true} do {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
 		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] call life_fnc_MP;
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
-	
+
 	sleep .15;
 	_cP = _cP + .01;
 	_progressBar progressSetPosition _cP;
