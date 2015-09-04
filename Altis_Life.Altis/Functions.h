@@ -267,6 +267,17 @@ class Life_Client_Core
 		class ticketPaid {};
 		class wantedGrab {};
 	};
+
+	class CopPlaceables
+	{
+		file = "core\cop\placeables";
+		class placeablesInit {};
+		class placeablesMenu {};
+		class placeablesRemoveAll {};
+		class placeablePlace {};
+		class placeableCancel {};
+		class placeablesPlaceComplete {};
+	};
 	
 	class Gangs
 	{
