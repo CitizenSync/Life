@@ -4716,6 +4716,30 @@
 			<Italian>Rob Person</Italian>		
 			<Portuguese>Roubar Jogador</Portuguese>
 		</Key>
+		<Key ID="STR_pAct_DriverSeat">
+			<Original>Enter Driver Seat</Original>
+			<English>driver's seat</English>
+			<German>Auf den Fahrersitz</German>
+			<French>Place conducteur</French>
+		</Key>
+		<Key ID="STR_pAct_PassengerSeat">
+			<Original>Enter Passenger Seat</Original>
+			<English>passenger seat</English>
+			<German>Auf den Passagiersitz</German>
+			<French>Place passager</French>
+		</Key>
+		<Key ID="STR_pAct_GunnerSeat">
+			<Original>Enter Gunner Seat</Original>
+			<English>gunner seat</English>
+			<German>gunner seat</German>
+			<French>Place tireur</French>
+		</Key>
+		<Key ID="STR_pAct_GoOut">
+			<Original>Exit Vehicle</Original>
+			<English>Go out of vehicle</English>
+			<German>Aus dem Fahrzeug austeigen</German>
+			<French>Sortir du véhicule</French>
+		</Key>
 	</Package>
 	<Package name="Crimes">
 		<Key ID="STR_Crime_187V">
