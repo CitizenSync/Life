@@ -65,9 +65,10 @@ class CarShops {
 			{ "B_Quadbike_01_F", 2500, "" },
 			{ "B_G_Offroad_01_F", 15000, "" },
 			{ "O_MRAP_02_F", 150000, "rebel" },
+			{ "B_G_Offroad_01_armed_F", 750000, "rebel" },
 			{ "B_Heli_Light_01_F", 325000, "rebel" },
 			{ "I_Heli_Transport_02_F", 30000, "rebel" },
-			{ "B_G_Offroad_01_armed_F", 750000, "rebel" }
+			{ "I_Heli_light_03_unarmed_F", 75000, "rebel" }
 		};
 	};
 
