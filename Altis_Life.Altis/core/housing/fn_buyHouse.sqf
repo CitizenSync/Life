@@ -6,14 +6,14 @@
 	Buys the house?
 */
 private["_house","_uid","_action","_houseCfg"];
-_house = typeOf ["Land_i_House_Small_01_V1_F","Land_i_House_Small_01_V2_F","Land_i_House_Small_01_V3_F","Land_i_House_Small_02_V1_F","Land_i_House_Small_02_V2_F","Land_i_House_Small_02_V3_F","Land_i_House_Small_03_V1_F","Land_i_House_Big_01_V1_F","Land_i_House_Big_01_V2_F","Land_i_House_Big_01_V3_F","Land_i_House_Big_02_V1_F","Land_i_House_Big_02_V2_F","Land_i_House_Big_02_V3_F","Land_i_Stone_HouseSmall_V1_F","Land_i_Stone_HouseSmall_V2_F","Land_i_Stone_HouseSmall_V3_F","Land_i_Stone_Shed_V1_F","Land_i_Stone_Shed_V2_F","Land_i_Stone_Shed_V3_F","Land_i_Addon_02_V1_F","Land_i_Garage_V1_F","Land_i_Garage_V2_F","Land_i_Garage_V1_dam_F","Land_i_Shed_Ind_F"];
+_house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = getPlayerUID player;
-
+diag_log format["|%1 _house| %2 _uid",_house,_uid];
 if(isNull _house) exitWith {};
 if(!(_house isKindOf "House_F")) exitWith {};
 if((_house GVAR ["house_owned",false])) exitWith {hint "This house is already owned even though you shouldn't be seeing this hint..."};
 if(!isNil {(_house GVAR "house_sold")}) exitWith {hint localize "STR_House_Sell_Process"};
-if(!license_civ_home) exitWith {hint localize "STR_House_License"};
+//if(!license_civ_home) exitWith {hint localize "STR_House_License"};
 if(count life_houses >= (LIFE_SETTINGS(getNumber,"house_limit"))) exitWith {hint format[localize "STR_House_Max_House",LIFE_SETTINGS(getNumber,"house_limit")]};
 closeDialog 0;
 
@@ -27,9 +27,12 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	_valid = _house GVAR ["house_owner",true];
-if(EQUAL(_valid,true)) then {
-		if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
+	//[[_house,_uid],"TON_fnc_preCheckHouse",false,false] call life_fnc_MP;
+
+	//_valid = _house GVAR ["house_owner",true];
+	//diag_log format["| _valid %1 | ",_valid];
+	if(isNil {_house GVAR "house_owner"}) then {
+		if( BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 		[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 		_house SVAR ["house_owner",[_uid,profileName],true];
 		_house SVAR ["locked",true,true];
@@ -50,6 +53,6 @@ if(EQUAL(_valid,true)) then {
 			_house SVAR [format["bis_disabled_Door_%1",_i],1,true];
 		};
 	} else {
-		hint "Someone already own's this building.";
+		hint "Someone already owns this building.";
 	};
 };
