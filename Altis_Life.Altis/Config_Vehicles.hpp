@@ -675,19 +675,19 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "RebelOne", "civ", {
+        	{ "OD Green", "reb", {
                 "\A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_co.paa"
             } },
-			{ "RebelTwo", "civ", {
+			{ "Rebel Digital", "reb", {
 	                "\A3\air_f_epb\Heli_Light_03\data\heli_light_03_base_indp_co.paa"   
             } },
-			{ "SkinOne", "civ", {
+			{ "Red", "civ", {
 	                "#(argb,8,8,3)color(0.5,0.05,0.05,1)"
             } },
-			{ "SkinTwo", "civ", {
+			{ "Ice White", "civ", {
 	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)" 
             } },
-            { "SkinThree", "civ", {
+            { "Blue", "civ", {
                 "#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { "Black", "cop", {
@@ -699,7 +699,7 @@ class CfgVehicles {
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         storageFee[] = { 55000, 0, 22000, 0 };
-		garageSell[] = { 72500, 0, 35000, 0 };
+	garageSell[] = { 72500, 0, 35000, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
@@ -709,14 +709,17 @@ class CfgVehicles {
 			{ "White / Blue", "civ", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"   
             } },
-			{ "Digi Green", "civ", {
+			{ "Digital Green", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"
             } },
-			{ "Desert Digi", "reb", {
+			{ "Desert Digital", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa" 
             } },
             { "EMS White", "med", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
     };
@@ -724,7 +727,7 @@ class CfgVehicles {
     class B_Heli_Transport_03_unarmed_F {
     	vItemSpace = 210;
         storageFee[] = { 0, 55000, , 0 };
-		garageSell[] = { 0, 55000, , 0 };
+	garageSell[] = { 0, 55000, , 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = { };
