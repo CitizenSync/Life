@@ -552,7 +552,7 @@ class CfgVehicles {
         	{ "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
             } },
-			{ "Black", "cop", {
+			{ "Black", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
 			{ "Silver", "civ", {
@@ -561,8 +561,8 @@ class CfgVehicles {
 			{ "Orange", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
-            { "Cop", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+            { "New Cop", "cop", {
+                "textures\lapd_suv.paa"
             } }
 	        };
     };
