@@ -3490,6 +3490,9 @@
 			<Italian>!!!!!! QUALCUNO STA CERCANDO DI INTRODURSI NELLA RISERVA FEDERALE !!!!!!</Italian>
 			<Portuguese>!!!!! A RESERVA FEDERAL ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
 		</Key>
+		<Key ID="STR_ISTR_Bolt_AlertBankParos">
+			<Original>Someone is breaking into the Paros Community Bank!!</Original>
+		</Key>
 		<Key ID="STR_ISTR_Bolt_AlertHouse">
 			<Original>%1 was seen breaking into a house.</Original>
 			<German>%1 wurde beim Einbruch in ein Haus gesehen.</German>
