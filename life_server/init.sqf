@@ -160,14 +160,18 @@ life_wanted_list = [];
 [] spawn TON_fnc_initHouses;
 
 /* Setup the federal reserve building(s) */
-private["_dome","_rsb"];
+private["_dome","_rsb","_bank1"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
+_bank1 = nearestObject [[20950,16856,0],"Land_i_Shop_01_V1_F"];
 
 for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
+for "_k" from 1 to 5 do {_bank1 setVariable[format["bis_disabled_Door_%1",_k],1,true]; _bank1 animate [format["Door_%1_rot",_k],0];};
 _rsb setVariable["bis_disabled_Door_1",1,true];
+_bank1 setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+_bank1 allowDamage false;
 
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;

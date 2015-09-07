@@ -10,10 +10,9 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
-	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
-} else {
-	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] call life_fnc_MP;
-};
+	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP; };
+if((nearestObject [[20950,16856,0],"Land_i_Shop_01_V1_F"]) == _building) then{
+	[[1,"STR_ISTR_Bolt_AlertBankParos",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;};
 
 _doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _building) >> "NumberOfDoors");
 
@@ -40,11 +39,10 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-	// was .003
-	case "Land_Dome_Big_F": {_cpRate = 0.9;};
-	// was .0015
-	case "Land_Research_house_V1_F": {_cpRate = 0.09;};
-	default {_cpRate = 0.08;}
+	case "Land_Dome_Big_F": {_cpRate = 0.003;};
+	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
+	case "Land_i_Shop_01_V1_F": {_cpRate = 0.0035;};
+	default {_cpRate = 0.0035;}
 };
 
 while {true} do
