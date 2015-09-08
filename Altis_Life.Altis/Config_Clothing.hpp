@@ -83,12 +83,12 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_Rangemaster_belt", 50, { "", "", -1 } },
-			{ "V_BandollierB_oli", 75, { "", "", -1 } },
-			{ "V_BandollierB_khk", 75, { "", "", -1 } },
-			{ "V_TacVest_khk", 3250, { "", "", -1 } },
-			{ "V_TacVest_brn", 3250, { "", "", -1 } },
-			{ "V_TacVest_oli", 3250, { "", "", -1 } }
+			{ "V_Rangemaster_belt", "", 50, { "", "", -1 } },
+			{ "V_BandollierB_oli", "", 75, { "", "", -1 } },
+			{ "V_BandollierB_khk", "", 75, { "", "", -1 } },
+			{ "V_TacVest_khk", "", 3250, { "", "", -1 } },
+			{ "V_TacVest_brn", "", 3250, { "", "", -1 } },
+			{ "V_TacVest_oli", "", 3250, { "", "", -1 } }
 		};
 
 		backpacks[] = {
@@ -230,25 +230,24 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_ShemagOpen_tan", "", 300, { "", "", -1 } },
-			{ "H_Shemag_olive", "", 300, { "", "", -1 } },
-			{ "H_ShemagOpen_khk", "", 300, { "", "", -1 } },
-			{ "H_HelmetO_ocamo", "", 250, { "", "", -1 } },
+			{ "H_Booniehat_grn", "", 100, { "", "", -1 } },
+			{ "H_Booniehat_tan", "", 100, { "", "", -1 } },
+			{ "H_Booniehat_dirty", "", 100, { "", "", -1 } },
+			{ "H_Booniehat_dgtl", "", 100, { "", "", -1 } },
+			{ "H_Booniehat_khk_hs", "", 100, { "", "", -1 } },
 			{ "H_MilCap_oucamo", "", 200, { "", "", -1 } },
 			{ "H_Bandanna_camo", "", 150, { "", "", -1 } },
 			{ "G_Bandanna_beast", "", 150, {"", "", -1 } },
 			{ "G_Bandanna_blk", "", 150, {"", "", -1 } },
 			{ "G_Bandanna_khk", "", 150, {"", "", -1 } },
-			{ "G_Bandanna_shades", "", 250, {"", "", -1 } },
-			{ "H_Booniehat_grn", "", 100, { "", "", -1 } },
-			{ "H_Booniehat_tan", "", 100, { "", "", -1 } },
-			{ "H_Booniehat_dirty", "", 100, { "", "", -1 } },
-			{ "H_Booniehat_dgtl", "", 100, { "", "", -1 } },
-			{ "H_Booniehat_khk_hs", "", 100, { "", "", -1 } }
+			{ "G_Bandanna_shades", "", 250, {"", "", -1 } }
 		};
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
+			{ "H_ShemagOpen_tan", "", 300, { "", "", -1 } },
+			{ "H_Shemag_olive", "", 300, { "", "", -1 } },
+			{ "H_ShemagOpen_khk", "", 300, { "", "", -1 } },
 			{ "G_Shades_Black", "", 50, { "", "", -1 } },
 			{ "G_Shades_Blue", "", 50, { "", "", -1 } },
 			{ "G_Sport_Blackred", "", 50, { "", "", -1 } },
@@ -271,8 +270,7 @@ class Clothing {
 			{ "V_Chestrig_khk", "", 2200, { "", "", -1 } },
 			{ "V_Chestrig_khk", "", 2200, { "", "", -1 } },
 			{ "V_PlateCarrier1_rgr", "", 4500, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 4500, { "", "", -1 } },
-			
+			{ "V_PlateCarrier2_rgr", "", 4500, { "", "", -1 } }
 		};
 
 		backpacks[] = {
