@@ -1,5 +1,5 @@
 /*
-file: fn_robGasStations.sqf
+file: fn_robGas.sqf
 Author: MrKraken
 */
 
@@ -13,14 +13,14 @@ _coolDown = [(_this select 3),2,1200,[0]] call BIS_fnc_param; // in seconds defa
 //all the checks
 if(side _robber != civilian) exitWith { hint format["You can not rob this %1",_shopName]};
 if(_robber distance _shop > 2) exitWith { hint format["You need to be within 2m of %1",_shopName]};
-if (_shop getVariable ["rip",false]) exitWith { hint "Robbery already in progress!" };
-if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
-if !(alive _robber) exitWith {};
-if !(_shop getVariable ["robbable",true]) exitWith { hint "This gas station was recently robbed and is under high security. Cannot be robbed at this time." };
+if(_shop getVariable ["rip",false]) exitWith { hint "Robbery already in progress!" };
+if(vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
+if!(alive _robber) exitWith {};
+if!(_shop getVariable ["robbable",true]) exitWith { hint "This gas station was recently robbed and is under high security. Cannot be robbed at this time." };
 if(currentWeapon player == "") exitWith {hint "You expect to rob a store without a gun?";};
 _cops = (west countSide playableUnits);
 if(_cops < 0) exitWith{hint "There is not enough Police to rob the Gas Station!"};
-if (_cashRegister == 0) exitWith { hint "There is no cash in the register!" };
+if(_cashRegister == 0) exitWith { hint "There is no cash in the register!" };
 
 
 _shop setVariable ["rip",true,true];
