@@ -73,7 +73,7 @@ class Life_Settings {
 	sellArray[] = {
 	};
 
-	allowedSavedVirtualItems[] = { "defibrillator","pickaxe", "fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit", "storageSmall", "storageBig", "redgull", "coffee", "waterBottle", "apple", "peach", "tbacon", "donut", "rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled", "mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled", "sheepGrilled", "goatGrilled" };
+	allowedSavedVirtualItems[] = { "bloodbag","defibrillator","pickaxe", "fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit", "storageSmall", "storageBig", "redgull", "coffee", "waterBottle", "apple", "peach", "tbacon", "donut", "rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled", "mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled", "sheepGrilled", "goatGrilled" };
 };
 
 //Virtual Items
@@ -85,12 +85,16 @@ class VirtualItems {
 	VITEMMACRO(spikeStrip, "STR_Item_SpikeStrip", "spikeStrip", 15, 2500, 1200, false, -1, "")
 	VITEMMACRO(lockpick, "STR_Item_Lockpick", "lockpick", 1, 150, 75, false, -1, "")
 	VITEMMACRO(goldbar, "STR_Item_GoldBar", "goldBar", 12, -1, 95000, false, -1, "")
+	VITEMMACRO(bankbond, "STR_Item_Bankbond", "bankbond", 12, -1, 95000, false, -1, "")
 	VITEMMACRO(blastingcharge, "STR_Item_BCharge", "blastingCharge", 15, 35000, -1, true, -1, "icons\ico_blastingCharge.paa")
 	VITEMMACRO(boltcutter, "STR_Item_BCutter", "boltCutter", 5, 7500, -1, true, -1, "icons\ico_boltcutters.paa")
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
-	VITEMMACRO(defibrillator, "STR_Item_Defibrillator", "defibrillator", 2, 3000, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 150000, -1, false, -1, "icons\ico_storageBig.paa")
+	
+	//Medical Supplies
+	VITEMMACRO(defibrillator, "STR_Item_Defibrillator", "defibrillator", 2, 3000, -1, false, -1, "")
+	VITEMMACRO(bloodbag, "STR_Item_Bloodbag", "bloodbag", 2, 500, -1, false, -1, "")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 7, -1, -1, false, -1, "")
@@ -256,7 +260,7 @@ class VirtualShops {
 
 	class gold {
 		name = "STR_Shops_Gold";
-		items[] = { "goldbar" };
+		items[] = { "goldbar", "bankbond" };
 	};
 };
 

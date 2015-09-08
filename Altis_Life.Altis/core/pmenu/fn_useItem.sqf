@@ -68,6 +68,11 @@ switch (true) do {
 		closeDialog 0;
 	};
 
+	case (EQUAL(_item,"bloodbag")): {
+		[cursorTarget] spawn life_fnc_bloodbag;
+		closeDialog 0;
+	};
+
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]): {
 		if(!(EQUAL(M_CONFIG(getNumber,"VirtualItems",_item,"edible"),-1))) then {
 			if([false,_item,1] call life_fnc_handleInv) then {

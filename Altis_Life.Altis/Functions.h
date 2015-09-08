@@ -55,6 +55,8 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class bloodbag {};
+		class bloodbagself {};
 	};
 	
 	class Actions
@@ -94,6 +96,7 @@ class Life_Client_Core
 		class gutAnimal {};
 		class surrender {};
 		class robGas {};
+		class robBank {};
 	};
 	
 	class Housing

@@ -2,7 +2,7 @@
 /*
 	File: fn_onPlayerKilled.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	When the player dies collect various information about that player
 	and pull up the death dialog / camera functionality.
@@ -13,12 +13,13 @@ _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 //Set some vars
-_unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
-_unit setVariable["name",profileName,TRUE]; //Set my name so they can say my name.
-_unit setVariable["restrained",FALSE,TRUE];
-_unit setVariable["Escorting",FALSE,TRUE];
-_unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
-_unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
+_unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
+_unit SVAR ["name",profileName,TRUE]; //Set my name so they can say my name.
+_unit SVAR ["restrained",FALSE,TRUE];
+_unit SVAR ["Escorting",FALSE,TRUE];
+_unit SVAR ["bloodBagged",FALSE,TRUE];
+_unit SVAR ["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
+_unit SVAR ["steam64id",(getPlayerUID player),true]; //Set the UID.
 
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
@@ -40,10 +41,10 @@ _unit spawn
 	disableSerialization;
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
-	
+
 	_maxTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
 	round(_maxTime - time) <= 0 OR isNull _this};
 	_RespawnBtn ctrlEnable true;
 	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
@@ -69,7 +70,7 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 		};
 	} else {
 		[[getPlayerUID _killer,_killer getVariable["realname",name _killer],"187"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-		
+
 		if(!local _killer) then {
 			[[3],"life_fnc_removeLicenses",_killer,FALSE] call life_fnc_MP;
 		};

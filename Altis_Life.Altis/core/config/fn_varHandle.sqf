@@ -66,6 +66,8 @@ switch (_mode) do
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
 			case "defibrillator": {"life_inv_defibrillator"};
+			case "bankbond": {"life_inv_bankbond"};
+			case "bloodbag": {"life_inv_bloodbag"};
 		};
 	};
 
@@ -123,6 +125,8 @@ switch (_mode) do
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_defibrillator": {"defibrillator"};
+			case "life_inv_bankbond": {"bankbond"};
+			case "life_inv_bloodbag": {"bloodbag"};
 		};
 	};
 };
