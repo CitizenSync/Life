@@ -4,7 +4,7 @@ Based off MrKraken's gas station robbery script.
 Second Author: Jesse Schultz
 */
 
-private["_robber","_shop","_type","_ui","_progress","_pgText","_cP","_coolDown","_pos","_shopName","_item"];
+private["_robber","_shop","_type","_ui","_progress","_pgText","_cP","_coolDown","_pos","_shopName","_item","_qty"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 _shopName =[(_this select 3),1,"Vault",[""]] call BIS_fnc_param; // name of the place robbed "" is none provided
@@ -16,7 +16,7 @@ if(_robber distance _shop > 2) exitWith { hint format["You need to be within 2m 
 if (_shop getVariable ["rip",false]) exitWith { hint "Hey! No double dipping!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
-if !(_shop getVariable ["robbable",true]) exitWith { hint "This vault was just taken from and can not be robbed yet!" };
+if !(_shop getVariable ["robbable",true]) exitWith { hint "This vault was just cracked and can not be cracked yet!" };
 if(currentWeapon player == "") exitWith {hint "You expect to rob a bank without a gun?";};
 _cops = (west countSide playableUnits);
 if(_cops < 0) exitWith{hint "There is not enough Police to take from the vault!"};
@@ -31,7 +31,7 @@ if(_chance == 0) then
 {
 	hint "You have tripped the alarm and the Police have been alerted!";
 	playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", player];
-	[[1,format["ALARM! - %1: %2 is being robbed by %3!",_shopName,_shop,name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[1,format["ALARM! - A bank being robbed by %1!",name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 };
 
 disableSerialization;
@@ -39,7 +39,7 @@ disableSerialization;
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["Collecting the bank bonds! Stay close to the vault (2m)...","%"];
+_pgText ctrlSetText format["Collecting the bank bonds! Stay near the vault (2m)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
 
@@ -50,7 +50,7 @@ if(_shop getVariable ["rip",false]) then
 		uiSleep 0.85;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["Collecting the bank bonds! Stay close to the vault (2m) (%1%2)...",round(_cP * 100),"%"];
+		_pgText ctrlSetText format["Collecting the bank bonds! Stay near the vault (2m)... (%1%2)",round(_cP * 100),"%"];
 		_Pos = position player; // by ehno: get player pos
 		_marker = createMarker ["Marker200", _Pos]; //by ehno: Place a Maker on the map
 		"Marker200" setMarkerColor "ColorRed";
@@ -79,8 +79,10 @@ if(_shop getVariable ["rip",false]) then
 	if!(alive _robber) exitWith {};
 
 	_shop setVariable ["rip",false,true];
-if([true,_item,5] call life_fnc_handleInv) then {
-	titleText [format["You have grabbed 5 Bank Bonds!"],"PLAIN"];
+
+_qty = ceil (random 5);
+if([true,_item,_qty] call life_fnc_handleInv) then {
+	titleText [format["You have grabbed %1 Bank Bonds!",_qty],"PLAIN"];
 } else {
 	titleText ["Your inventory is full","PLAIN"];
 };
