@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 file: fn_robGas.sqf
 Author: MrKraken
@@ -12,7 +13,7 @@ _coolDown = [(_this select 3),2,1200,[0]] call BIS_fnc_param; // in seconds defa
 
 //all the checks
 if(side _robber != civilian) exitWith { hint format["You can not rob this %1",_shopName]};
-if(_robber distance _shop > 2) exitWith { hint format["You need to be within 2m of %1",_shopName]};
+if(_robber distance _shop > 4) exitWith { hint format["You need to be within 4m of %1",_shopName]};
 if(_shop getVariable ["rip",false]) exitWith { hint "Robbery already in progress!" };
 if(vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if!(alive _robber) exitWith {};
@@ -81,14 +82,14 @@ if(_shop getVariable ["rip",false]) then
 	[_shop] spawn //prevent shop from being robbed again
 	{
 		(_this select 0) setVariable ["robbable",false,true];
-		uiSleep 1500;
-		//uiSleep (random(15) * 60);
+		uiSleep (random(15) * 60);
 		(_this select 0) setVariable ["robbable",true,true];
 	};
 	if!(alive _robber) exitWith {};
 
+
 	_shop setVariable ["rip",false,true];
-	[_cashRegister,0,0] call life_fnc_handleMoney;
+	ADD(CASH,_cashRegister);
 	[[getPlayerUID _robber,name _robber,"188"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };
 
