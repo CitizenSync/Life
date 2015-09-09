@@ -38,6 +38,11 @@ if ((vehicle _source isKindOf "LandVehicle") && _source != _unit && driver (vehi
 	};
 };
 
+if ((((getDammage _unit) + _damage) >= 0.90) || (_damage >= 0.90)) then
+{
+	life_dead_gear = [player] call life_fnc_fetchDeadGear;
+};
+
 // No damage in jail
 if (life_is_arrested) then
 {
