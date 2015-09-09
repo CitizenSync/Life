@@ -18,6 +18,7 @@ if(vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if!(alive _robber) exitWith {};
 if!(_shop getVariable ["robbable",true]) exitWith { hint "This gas station was recently robbed and is under high security. Cannot be robbed at this time." };
 if(currentWeapon player == "") exitWith {hint "You expect to rob a store without a gun?";};
+if(currentWeapon player == "Binocular") exitWith {hint "Nice try at that exploit...";};
 _cops = (west countSide playableUnits);
 if(_cops < 0) exitWith{hint "There is not enough Police to rob the Gas Station!"};
 if(_cashRegister == 0) exitWith { hint "There is no cash in the register!" };
