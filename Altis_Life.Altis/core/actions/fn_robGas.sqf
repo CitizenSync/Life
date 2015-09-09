@@ -81,7 +81,8 @@ if(_shop getVariable ["rip",false]) then
 	[_shop] spawn //prevent shop from being robbed again
 	{
 		(_this select 0) setVariable ["robbable",false,true];
-		uiSleep (random(15) * 60);
+		uiSleep 1500;
+		//uiSleep (random(15) * 60);
 		(_this select 0) setVariable ["robbable",true,true];
 	};
 	if!(alive _robber) exitWith {};
