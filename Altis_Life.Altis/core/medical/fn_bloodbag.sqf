@@ -1,11 +1,13 @@
+#include <macro.h>
 /*
 	File: fn_bloodbag.sqf
 	progress bar derived from Tonics in lockpick
 	Author: Tonic
 	Second Author: [midgetgrimm]
-	Description: blood bag a player to give them full health and no fatgiue - need an ivstarter kit and blood :P
+	Third Author: Jesse Schultz
+	Description: blood bag a player to give them full health and no fatgiue
 */
-private["_curTarget","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_badDistance"];
+private["_curTarget","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_badDistance","_val"];
 _curTarget = cursorTarget;
 life_interrupted = false;
 if(life_action_inUse) exitWith {};
@@ -67,7 +69,10 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText["Action cance
 _curTarget setdamage 0;
 _curTarget setFatigue 0;
 _curTarget setVariable["bloodBagged",false,true];
-if(playerSide == independent) then { ADD(CASH,1500); hint"You have received $1500 for your services";};
+
+_val = 1500;
+if(playerSide == independent) then { ADD(CASH,_val); hint "You have received $1,500 for your services"; };
+
 player setVariable["bloodBagged",false,true];
 [false,"bloodbag",1] call life_fnc_handleInv;
 life_action_inUse = false;
