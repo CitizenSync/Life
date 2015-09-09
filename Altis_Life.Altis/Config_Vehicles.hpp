@@ -389,19 +389,19 @@ class CfgVehicles {
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { " White", "civ", {
@@ -451,19 +451,19 @@ class CfgVehicles {
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { " White", "civ", {
@@ -509,19 +509,19 @@ class CfgVehicles {
 	        { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { " White", "civ", {
@@ -621,19 +621,19 @@ class CfgVehicles {
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { " White", "civ", {
@@ -748,16 +748,16 @@ class CfgVehicles {
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { "Black", "cop", {
@@ -782,19 +782,19 @@ class CfgVehicles {
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
-            { "Pink", "civ," {
+            { "Pink", "civ", {
             		"#(argb,8,8,3)color(0.2,0,0.2,1)"
             } },
-            { "Lime Green", "civ," {
+            { "Lime Green", "civ", {
             		"#(argb,8,8,3)color(0,0.5,0,1)"
             } },
-            { "Purple", "civ," {
+            { "Purple", "civ", {
             		"#(argb,8,8,3)color(0.1,0,0.1,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ," {
+            { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { " White", "civ", {
