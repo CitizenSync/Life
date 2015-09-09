@@ -18,13 +18,13 @@ if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
 if !(_shop getVariable ["robbable",true]) exitWith { hint "This vault was just cracked and can not be cracked yet!" };
 if(currentWeapon player == "") exitWith {hint "You expect to rob a bank without a gun?";};
+if(currentWeapon player == "Binocular") exitWith {hint "Nice try at that exploit...";};
 _cops = (west countSide playableUnits);
 if(_cops < 0) exitWith{hint "There is not enough Police to take from the vault!"};
 
 _shop setVariable ["rip",true,true];
 _item = "bankbond";
 _chance = 0;
-//_chance = random(10);
 
 // chance of alarm going off.
 if(_chance == 0) then
@@ -50,7 +50,7 @@ if(_shop getVariable ["rip",false]) then
 		uiSleep 0.85;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["Collecting the bank bonds! Stay near the vault (2m)... (%1%2)",round(_cP * 100),"%"];
+		_pgText ctrlSetText format["Collecting bank bonds! Stay near the vault (2m)... (%1%2)",round(_cP * 100),"%"];
 		_Pos = position player; // by ehno: get player pos
 		_marker = createMarker ["Marker200", _Pos]; //by ehno: Place a Maker on the map
 		"Marker200" setMarkerColor "ColorRed";
@@ -58,14 +58,14 @@ if(_shop getVariable ["rip",false]) then
 		"Marker200" setMarkerType "mil_warning";
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 2.5) exitWith {_shop setVariable ["rip",false,true];};
+		if(_robber distance _shop > 3) exitWith {_shop setVariable ["rip",false,true];};
 		if!(alive _robber) exitWith {_shop setVariable ["rip",false,true];};
 		if(life_istazed) exitWith {_shop setVariable ["rip",false,true];}; //Tazed
 		if(player getVariable ["restrained",false]) exitWith {_shop setVariable ["rip",false,true];};
 		if(life_interrupted) exitWith {_shop setVariable ["rip",false,true];};
 	};
 	if!(alive _robber) exitWith {_shop setVariable ["rip",false,true];};
-	if(_robber distance _shop > 2.5) exitWith { deleteMarker "Marker200"; hint format["You need to stay within 2m to steal from the %1! - Now the %1 is locked.",_shopName]; 5 cutText ["","PLAIN"]; _shop setVariable ["rip",false,true]; };
+	if(_robber distance _shop > 5) exitWith { deleteMarker "Marker200"; hint format["You need to stay within 2m to steal from the %1! - Now the %1 is locked.",_shopName]; 5 cutText ["","PLAIN"]; _shop setVariable ["rip",false,true]; };
 	5 cutText ["","PLAIN"];
 
 	deleteMarker "Marker200"; // by ehno delete maker
@@ -73,7 +73,9 @@ if(_shop getVariable ["rip",false]) then
 	[_shop] spawn //prevent shop from being robbed again
 	{
 		(_this select 0) setVariable ["robbable",false,true];
-		uiSleep (random(15) * 60);
+		// Sleeps for 35mins
+		uiSleep 2100;
+		// uiSleep (random(15) * 60);
 		(_this select 0) setVariable ["robbable",true,true];
 	};
 	if!(alive _robber) exitWith {};
