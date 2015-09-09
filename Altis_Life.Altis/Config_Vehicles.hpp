@@ -401,10 +401,7 @@ class CfgVehicles {
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ", {
-            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
-            } },
-            { " White", "civ", {
+            { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } }
 	    };
@@ -463,10 +460,7 @@ class CfgVehicles {
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ", {
-            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
-            } },
-            { " White", "civ", {
+            { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } },
             { "Police", "cop", {
@@ -521,10 +515,7 @@ class CfgVehicles {
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ", {
-            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
-            } },
-            { " White", "civ", {
+            { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } },
 	        { "Rebel Camo", "reb", {
@@ -633,10 +624,7 @@ class CfgVehicles {
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ", {
-            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
-            } },
-            { " White", "civ", {
+            { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } },
             { "Police", "cop", {
@@ -794,10 +782,7 @@ class CfgVehicles {
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
-            { "Sky Blue", "civ", {
-            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
-            } },
-            { " White", "civ", {
+            { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } },
 			{ "Digital Green", "reb", {
