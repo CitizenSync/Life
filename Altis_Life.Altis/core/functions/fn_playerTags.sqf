@@ -2,7 +2,7 @@
 /*
 	File: fn_playerTags.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Adds the tags above other players heads when close and have visible range.
 */
@@ -35,19 +35,24 @@ SUB(_units,[player]);
 		};
 		_sPos = worldToScreen _pos;
 		_distance = _pos distance player;
-		if(count _sPos > 1 && {_distance < 15}) then {
+		if(count _sPos > 1 && {_distance < 100}) then {
 			_text = switch (true) do {
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
-				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x GVAR "rank")) do {
-					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
+				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2 %3",switch ((_x GVAR "rank")) do {
+					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
 					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
 					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
 					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
 					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-					},_x GVAR ["realname",name _x]]};
+					},
+					switch ((_i GVAR "rank")) do {
+						case 1: {"Police Cadet"};
+					    case 2: {"Police Corporal"};
+					    case 3: {"Police Sergeant"};
+					    case 4: {"Police Lieutenant"};
+					    case 5: {"Police Captain"};
+					    default {"Police Constable"};
+					},_x,_i GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
 					if(!isNil {(group _x) GVAR "gang_name"}) then {
@@ -57,7 +62,7 @@ SUB(_units,[player]);
 					};
 				};
 			};
-			
+
 			_idc ctrlSetStructuredText parseText _text;
 			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
 			_idc ctrlSetScale scale;
