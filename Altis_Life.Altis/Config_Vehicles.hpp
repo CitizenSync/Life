@@ -386,11 +386,26 @@ class CfgVehicles {
             { "Fed", "cop", {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
-			{ "Police", "cop", {
-	                "#(ai,64,64,1)Fresnel(1.3,7)"
-            } },
-            { "Taxi", "civ", {
+            { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { " White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
             } }
 	    };
     };
@@ -433,6 +448,27 @@ class CfgVehicles {
 			{ "Green", "civ", {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
+            { "Yellow", "civ", {
+	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { " White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
             { "Police", "cop", {
                 "#(ai,64,64,1)Fresnel(1.3,7)"
             } }
@@ -470,6 +506,27 @@ class CfgVehicles {
 			{ "Hunter Camo", "civ", {
 	                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
 	        } },
+	        { "Yellow", "civ", {
+	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { " White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
 	        { "Rebel Camo", "reb", {
                 "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
             } }
@@ -561,7 +618,28 @@ class CfgVehicles {
 			{ "Orange", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
-            { "New Cop", "cop", {
+            { "Yellow", "civ", {
+	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { " White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
+            { "Police", "cop", {
                 "textures\lapd_suv.paa"
             } }
 	        };
@@ -605,10 +683,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Regular", "cop", {
-                "\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa"
-            } },
-            { "Black", "cop", {
+            { "Police", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
@@ -642,24 +717,6 @@ class CfgVehicles {
 			{ "Elliptical", "civ", {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"
             } },
-			{ "Furious", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"
-            } },
-			{ "Jeans Blue", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"
-            } },
-			{ "Speedy Redline", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"
-            } },
-			{ "Sunset", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"
-            } },
-			{ "Vrana", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"
-            } },
-			{ "Waves Blue", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"
-            } },
 			{ "Rebel Digital", "reb", {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
             } },
@@ -685,11 +742,23 @@ class CfgVehicles {
 			{ "Red", "civ", {
 	                "#(argb,8,8,3)color(0.5,0.05,0.05,1)"
             } },
-			{ "Ice White", "civ", {
+			{ "White", "civ", {
 	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)" 
             } },
-            { "Blue", "civ", {
-                "#(argb,8,8,3)color(0,0.1,0.3,1)"
+            { "Yellow", "civ", {
+	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -710,6 +779,27 @@ class CfgVehicles {
 			{ "White / Blue", "civ", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"   
             } },
+            { "Yellow", "civ", {
+	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
+            } },
+            { "Pink", "civ," {
+            		"#(argb,8,8,3)color(0.2,0,0.2,1)"
+            } },
+            { "Lime Green", "civ," {
+            		"#(argb,8,8,3)color(0,0.5,0,1)"
+            } },
+            { "Purple", "civ," {
+            		"#(argb,8,8,3)color(0.1,0,0.1,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "Sky Blue", "civ," {
+            		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { " White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
 			{ "Digital Green", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"
             } },
@@ -718,9 +808,6 @@ class CfgVehicles {
             } },
             { "EMS White", "med", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
-            } },
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
     };
@@ -728,7 +815,7 @@ class CfgVehicles {
     class B_Heli_Transport_03_unarmed_F {
     	vItemSpace = 210;
         storageFee[] = { 0, 55000, , 0 };
-	garageSell[] = { 0, 55000, , 0 };
+		garageSell[] = { 0, 55000, , 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = { };
