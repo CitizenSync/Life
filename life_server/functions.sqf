@@ -313,7 +313,7 @@ compileFinal "
 			deleteMarkerLocal _markName;
             _marker = createMarkerLocal [_markName,visiblePosition _unit];
             _marker setMarkerColorLocal ""ColorRed"";
-            _marker setMarkerTypeLocal ""hd_join"";
+            _marker setMarkerTypeLocal ""loc_Hospital"";
             _marker setMarkerTextLocal format[""EMS Request from %1"", _unit getVariable[""realname"",name _unit]];
 
             [_markName] spawn {
