@@ -165,12 +165,7 @@ class Clothing {
 		};
 
 		backpacks[] = {
-			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_Kitbag_cbr", "", 150, { "", "", -1 } },
-			{ "B_FieldPack_cbr", "", 125, { "", "", -1 } },
-			{ "B_AssaultPack_cbr", "", 175, { "", "", -1 } },
-			{ "B_Bergen_sgg", "", 200, { "", "", -1 } },
-			{ "B_Carryall_cbr", "", 225, { "", "", -1 } }
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
 		};
 	};
 
