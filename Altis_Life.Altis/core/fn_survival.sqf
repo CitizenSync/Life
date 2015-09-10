@@ -1,10 +1,9 @@
 #include <macro.h>
 /*
 	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	All survival? things merged into one thread.
+	Description: All survival? things merged into one thread.
 */
+
 private["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
 _fnc_food =  {
 	if(life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
@@ -23,7 +22,7 @@ _fnc_food =  {
 		};
 	};
 };
-	
+
 _fnc_water = {
 	if(life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
 	else
@@ -58,7 +57,7 @@ while {true} do {
 	/* Thirst / Hunger adjustment that is time based */
 	if((time - _waterTime) > 600) then {[] call _fnc_water; _waterTime = time;};
 	if((time - _foodTime) > 850) then {[] call _fnc_food; _foodTime = time;};
-	
+
 	/* Adjustment of carrying capacity based on backpack changes */
 	if(EQUAL(backpack player,"")) then {
 		life_maxWeight = life_maxWeightT;
@@ -69,13 +68,13 @@ while {true} do {
 			life_maxWeight = life_maxWeightT + (round(FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,_bp,"maximumload") / 4));
 		};
 	};
-	
+
 	/* Check if the player's state changed? */
 	if(vehicle player != _lastState OR {!alive player}) then {
 		[] call life_fnc_updateViewDistance;
 		_lastState = vehicle player;
 	};
-	
+
 	/* Check if the weight has changed and the player is carrying to much */
 	if(life_carryWeight > life_maxWeight && {!isForcedWalk player}) then {
 		player forceWalk true;
@@ -86,7 +85,7 @@ while {true} do {
 			player forceWalk false;
 		};
 	};
-	
+
 	/* Travelling distance to decrease thirst/hunger which is captured every second so the distance is actually greater then 650 */
 	if(!alive player) then {_walkDis = 0;} else {
 		_curPos = visiblePosition player;
@@ -103,8 +102,14 @@ while {true} do {
 		_lastPos = visiblePosition player;
 		_lastPos = (SEL(_lastPos,0)) + (SEL(_lastPos,1));
 	};
+
+	if((life_inv_goldbar > 0) OR (life_inv_bankbond > 0)) then {
+		player forceWalk true;
+		if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
+		if ((vehicle player) isKindOf "Air") then {
+			player action ["getOut", vehicle player];
+			hint parseText format ["<t color='#FF0000'><t size='1'>You cannot enter aircraft while carrying gold!</t></t>"];
+		};
+	};
 	uiSleep 1;
 };
-	
-	
-	
