@@ -2,7 +2,7 @@
 /*
 	File: fn_actionKeyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master action key handler, handles requests for picking up various items and
 	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
@@ -40,7 +40,7 @@ if(!alive _curTarget && _curTarget isKindOf "Animal" && !(EQUAL((typeOf _curTarg
 	[_curTarget] call life_fnc_gutAnimal;
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR (((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject[[20950,16856,0],"Land_i_Shop_01_V1_F"]) == _curTarget) OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 
@@ -71,13 +71,13 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 } else {
 	//OK, it wasn't a player so what is it?
 	private["_isVehicle","_miscItems","_money","_list"];
-	
+
 	_list = ["landVehicle","Ship","Air"];
 	_isVehicle = if(KINDOF_ARRAY(_curTarget,_list)) then {true} else {false};
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
 	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
 	_money = "Land_Money_F";
-	
+
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle) then {
 		if(!dialog) then {
