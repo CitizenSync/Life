@@ -4,6 +4,7 @@
 
 */
 disableSerialization;
+if (life_barrier_active) exitWith {closeDialog 0; hint"Can't place 2 at the same time!";};
 if (count life_bar_placey >= life_bar_limit) exitWith { hint "You've reached the limit of objects you can place."; };
 _display = findDisplay 20000;
 _placeables = _display displayCtrl 20001;

@@ -3,7 +3,7 @@
  Author: Maximum
  Description: Placeables for the cop\medic sides.
 */
-if((FETCH_CONST(life_coplevel)) >= 3) then {
+if((FETCH_CONST(life_coplevel)) >= 2) then {
 disableSerialization;
 createDialog "life_cop_placeables";
 waitUntil { !isNull(findDisplay 20000) };

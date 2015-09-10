@@ -58,11 +58,21 @@ class Life_Cop_Placeables {
             h = (1 / 25);
         };
         
+class Remove : life_RscButtonMenu {
+            idc = -1;
+            text = "Del Target";
+            onButtonClick = "[] call life_fnc_placeablesRemove";
+            x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.8 - (1 / 25);
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+        
         class RemoveAll : life_RscButtonMenu {
             idc = -1;
-            text = "Remove all";
+            text = "Del All";
             onButtonClick = "[] call life_fnc_placeablesRemoveAll";
-            x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+            x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
             y = 0.8 - (1 / 25);
             w = (6.25 / 40);
             h = (1 / 25);

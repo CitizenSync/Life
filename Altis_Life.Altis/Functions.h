@@ -97,6 +97,8 @@ class Life_Client_Core
 		class surrender {};
 		class robGas {};
 		class robBank {};
+		class untie {};
+		class tieingAction {};
 	};
 	
 	class Housing
@@ -215,6 +217,7 @@ class Life_Client_Core
 		file = "core\civilian";
 		class jailMe {};
 		class jail {};
+		class tieing {};
 		class tazed {};
 		class knockedOut {};
 		class knockoutAction {};
@@ -277,6 +280,7 @@ class Life_Client_Core
 		file = "core\cop\placeables";
 		class placeablesInit {};
 		class placeablesMenu {};
+		class placeablesRemove {};
 		class placeablesRemoveAll {};
 		class placeablePlace {};
 		class placeableCancel {};
