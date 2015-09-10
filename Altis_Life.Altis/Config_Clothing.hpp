@@ -123,6 +123,7 @@ class Clothing {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
 			{ "U_Competitor", "Cadet Uniform", 10, { "life_coplevel", "SCALAR", 1 } },
 			{ "U_O_Wetsuit", "Police Wetsuit", 500, {"life_coplevel", "SCALAR", 1} },
+			{ "U_B_CombatUniform_mcam", "Airman Uniform", 500, {"life_coplevel", SCALAR, 2 } },
 			{ "U_Rangemaster", "Police Uniform", 20, { "life_coplevel", "SCALAR", 2 } }	
 		};
 
