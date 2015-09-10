@@ -1877,13 +1877,6 @@
 			<Italian>Invio delle informazioni al server, attendere prego......</Italian>
 			<Portuguese>Enviando informaÃƒÂ§ÃƒÂµes para o servidor, seja paciente.....</Portuguese>
 		</Key>
-		<Key ID="STR_NOTF_ActionCancel">
-			<Original>Action Cancelled</Original>
-			<German>Aktion abgebrochen</German>
-			<French>Action AnnulÃƒÂ©e</French>
-			<Italian>Azione Annullata</Italian>
-			<Portuguese>AÃƒÂ§ÃƒÂ£o Cancelada</Portuguese>
-		</Key>
 		<Key ID="STR_NOTF_ActionInProc">
 			<Original>An action is already being processed...</Original>
 			<German>Es wird bereits eine Aktion ausgefÃƒÂ¼hrt...</German>
