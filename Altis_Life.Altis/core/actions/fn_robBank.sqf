@@ -65,7 +65,7 @@ if(_shop getVariable ["rip",false]) then
 		if(life_interrupted) exitWith {_shop setVariable ["rip",false,true];};
 	};
 	if!(alive _robber) exitWith {_shop setVariable ["rip",false,true];};
-	if(_robber distance _shop > 5) exitWith { deleteMarker "Marker200"; hint format["You need to stay within 2m to steal from the %1! - Now the %1 is locked.",_shopName]; 5 cutText ["","PLAIN"]; _shop setVariable ["rip",false,true]; };
+	if(_robber distance _shop > 3.3) exitWith { deleteMarker "Marker200"; hint format["You need to stay within 2m to steal from the %1! - Now the %1 is locked.",_shopName]; 5 cutText ["","PLAIN"]; _shop setVariable ["rip",false,true]; };
 	5 cutText ["","PLAIN"];
 
 	deleteMarker "Marker200"; // by ehno delete maker
