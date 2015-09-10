@@ -28,6 +28,7 @@ SUB(_units,[player]);
 	private "_text";
 	_idc = _ui displayCtrl (iconID + _forEachIndex);
 	if(!(lineIntersects [eyePos player, eyePos _x, player, _x]) && {!isNil {_x GVAR "realname"}}) then {
+		_hidden = ((goggles _x) in ["G_Balaclava_blk","G_Balaclava_combat","G_Balaclava_lowprofile","G_Balaclava_oli","G_Bandanna_aviator","G_Bandanna_beast","G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli","G_Bandanna_shades","G_Bandanna_sport","G_Bandanna_tan"]);
 		_pos = switch(typeOf _x) do {
 			case "Land_Pallet_MilBoxes_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 1.5]};
 			case "Land_Sink_F": {[visiblePosition _x select 0, visiblePosition _x select 1, (getPosATL _x select 2) + 2]};
@@ -35,7 +36,8 @@ SUB(_units,[player]);
 		};
 		_sPos = worldToScreen _pos;
 		_distance = _pos distance player;
-		if(count _sPos > 1 && {_distance < 100}) then {
+		if (_hidden) then { _distance = 5; };
+		if(count _sPos > 1 && {_distance < 75}) then {
 			_text = switch (true) do {
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
 				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x GVAR "rank")) do {
@@ -43,6 +45,9 @@ SUB(_units,[player]);
 					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
 					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
 					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
+					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
+					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
+					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
 					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
 					},_x GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
