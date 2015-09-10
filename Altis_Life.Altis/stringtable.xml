@@ -215,8 +215,111 @@
 			<Italian>Vedi ID</Italian>
 			<Portuguese>Menu do Admin</Portuguese>
 		</Key>
+		 <Key ID="STR_Admin_Spectate">
+			<Original>Spectate</Original>
+			<German>Zuschauen</German>
+			<French>Regardez</French>
+		</Key>
+		<Key ID="STR_Admin_Teleport">
+			<Original>Teleport</Original>
+			<German>Teleport</German>
+			<French>Teleport</French>
+		</Key>
+		<Key ID="STR_Admin_TpHere">
+			<Original>TP Here</Original>
+			<German>TP Hier</German>
+			<French>TP Ici</French>
+		</Key>
+		<Key ID="STR_Admin_Debug">
+			<Original>Debug</Original>
+			<German>Debug</German>
+			<French>Debug</French>
+		</Key>
+		<Key ID="STR_Admin_Compensate">
+			<Original>Comp</Original>
+			<German>Comp</German>
+			<French>Comp</French>
+		</Key>
+		<Key ID="STR_Admin_God">
+			<Original>GodMode</Original>
+			<German>Gott</German>
+			<French>Dieu</French>
+		</Key>
+		<Key ID="STR_Admin_Freeze">
+			<Original>Freeze</Original>
+			<German>Freeze</German>
+			<French>Geler</French>
+		</Key>
+		<Key ID="STR_Admin_Markers">
+			<Original>Markers</Original>
+			<German>Markers</German>
+			<French>Markers</French>
+		</Key>
+		<Key ID="STR_ANOTF_CompWarn">
+			<Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
+			<German>Compensation</German>
+			<French>Vous êtes sur le point de vous donner $%1 pour compenser à un autre joueur &lt;br/&gt;&lt;br/&gt; S'il vous plaît donner à cette à la personne vous compensez manuellement</French>
+		</Key>
+		<Key ID="STR_ANOTF_Success">
+			<Original>You have added $%1 to your account.</Original>
+			<German>To Be Changed</German>
+			<French>Vous avez ajouté $%1 à votre compte</French>
+		</Key>
+		<Key ID="STR_ANOTF_Fail">
+			<Original>You can not go above 999999.</Original>
+			<German>To Be Changed</German>
+			<French>Vous ne pouvez pas aller au-dessus $999999</French>
+		</Key>
+		<Key ID="STR_ANOTF_Amount">
+			<Original>Please type in the amount to compensate.</Original>
+			<German>To Be Changed</German>
+			<French>S'il vous plaît entrer la quantité pour compenser</French>
+		</Key>
+		<Key ID="STR_ANOTF_Frozen">
+			<Original>You have disabled %1's input.</Original>
+			<German>To Be Changed</German>
+			<French>Vous avez désactivé %1's contrôles</French>
+		</Key>
+		<Key ID="STR_ANOTF_Unfrozen">
+			<Original>You have enabled %1's input.</Original>
+			<German>To Be Changed</German>
+			<French>Vous avez permis %1's contrôles</French>
+		</Key>
+		<Key ID="STR_ANOTF_Error">
+			<Original>You can't do that dumbass.</Original>
+			<German>To Be Changed</German>
+			<French>Vous ne pouvez pas le faire sur vous-même</French>
+		</Key>
+		<Key ID="STR_ANOTF_ErrorLevel">
+			<Original>Your Admin Level is not high enough.</Original>
+			<German>To Be Changed</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
+		</Key>
+		<Key ID="STR_ANOTF_MDisabled">
+			<Original>Player Markers Disabled.</Original>
+			<German>To Be Changed</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
+		</Key>
+		<Key ID="STR_ANOTF_MEnabled">
+			<Original>Player Markers Enabled.</Original>
+			<German>To Be Changed</German>
+			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
+		</Key>
+		<Key ID="STR_NOTF_ActionCancel">
+			<Original>Action Cancelled</Original>
+			<German>Aktion abgebrochen</German>
+			<French>Action Annulée</French>
+		</Key>
 	</Package>
 	<Package name="Admin_Notifications">
+		<Key ID="STR_NOTF_Frozen">
+			<Original>You have been frozen by an administrator</Original>
+			<German>To Be Changed</German>
+		</Key>
+		<Key ID="STR_NOTF_Unfrozen">
+			<Original>You have been unfrozen by an administrator</Original>
+			<German>To Be Changed</German>
+		</Key>
 		<Key ID="STR_ANOTF_Query">
 			<Original>Querying...</Original>
 			<German>Abfrage lÃƒÂ¤uft...</German>
@@ -4727,19 +4830,16 @@
 		</Key>
 		<Key ID="STR_pAct_DriverSeat">
 			<Original>Enter Driver Seat</Original>
-			<English>Enter Driver Seat</English>
 			<German>Auf den Fahrersitz</German>
 			<French>Place conducteur</French>
 		</Key>
 		<Key ID="STR_pAct_PassengerSeat">
 			<Original>Enter Passenger Seat</Original>
-			<English>Enter Passenger Seat</English>
 			<German>Auf den Passagiersitz</German>
 			<French>Place passager</French>
 		</Key>
 		<Key ID="STR_pAct_GoOut">
 			<Original>Exit Vehicle</Original>
-			<English>Exit Vehicle</English>
 			<German>Aus dem Fahrzeug austeigen</German>
 			<French>Sortir du vÃ©hicule</French>
 		</Key>
