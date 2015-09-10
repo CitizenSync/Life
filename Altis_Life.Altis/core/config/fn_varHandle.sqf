@@ -31,7 +31,7 @@ switch (_mode) do
 			case "tuna": {"life_inv_tuna"};
 			case "mullet": {"life_inv_mullet"};
 			case "catshark": {"life_inv_catshark"};
-			case "turtle": {"life_inv_turtle"};
+			case "turtle_raw": {"life_inv_turtle"};
 			case "fishing": {"life_inv_fishingpoles"};
 			case "coffee": {"life_inv_coffee"};
 			case "turtlesoup": {"life_inv_turtlesoup"};
@@ -90,7 +90,7 @@ switch (_mode) do
 			case "life_inv_tuna": {"tuna"};
 			case "life_inv_mullet": {"mullet"};
 			case "life_inv_catshark": {"catshark"};
-			case "life_inv_turtle": {"turtle"};
+			case "life_inv_turtle": {"turtle_raw"};
 			case "life_inv_fishingpoles": {"fishing"};
 			case "life_inv_coffee": {"coffee"};
 			case "life_inv_turtlesoup": {"turtlesoup"};

@@ -38,21 +38,13 @@ SUB(_units,[player]);
 		if(count _sPos > 1 && {_distance < 100}) then {
 			_text = switch (true) do {
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
-				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2 %3",switch ((_x GVAR "rank")) do {
+				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x GVAR "rank")) do {
 					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
 					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
 					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
 					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
 					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-					},
-					switch ((_i GVAR "rank")) do {
-						case 1: {"Police Cadet"};
-					    case 2: {"Police Corporal"};
-					    case 3: {"Police Sergeant"};
-					    case 4: {"Police Lieutenant"};
-					    case 5: {"Police Captain"};
-					    default {"Police Constable"};
-					},_x,_i GVAR ["realname",name _x]]};
+					},_x GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
 					if(!isNil {(group _x) GVAR "gang_name"}) then {
