@@ -12,7 +12,6 @@ _obj = cursorTarget;
 if(isNull _obj) exitWith {}; //Not valid
 if(alive _obj) exitWith {}; //It's alive, don't take it charlie!
 
-<<<<<<< HEAD
 if((player distance (getMarkerPos "turtle_1") < 350) OR (player distance (getMarkerPos "turtle_2") < 350) OR (player distance (getMarkerPos "turtle_3") < 350) OR (player distance (getMarkerPos "turtle_4") < 350)) then {
 
 	if(([true,"turtle_raw",1] call life_fnc_handleInv)) then {
@@ -20,9 +19,3 @@ if((player distance (getMarkerPos "turtle_1") < 350) OR (player distance (getMar
 	titleText[localize "STR_NOTF_CaughtTurtle","PLAIN"];
 	};
 };
-=======
-if(([true,"turtle_raw",1] call life_fnc_handleInv)) then {
-	deleteVehicle _obj;
-	titleText[localize "STR_NOTF_CaughtTurtle","PLAIN"];
-};
->>>>>>> origin/master
