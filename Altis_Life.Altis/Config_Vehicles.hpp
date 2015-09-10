@@ -30,6 +30,7 @@ class CarShops {
 	class med_shop {
 		side = "med";
 		vehicles[] = {
+			{ "C_Hatchback_01_sport_F", 5000, ""},
 			{ "C_Offroad_01_F", 10000, "" },
 			{ "I_Truck_02_medical_F", 25000, "" },
 			{ "O_Truck_03_medical_F", 45000, "" },
@@ -41,7 +42,15 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", 50000, "" },
-			{ "O_Heli_Light_02_unarmed_F", 75000, "" }
+			{ "I_Heli_light_03_unarmed_F", 75000, "" }
+		};
+	};
+
+	class med_airos {
+		side = "med";
+		vehicles[] = {
+			{ "B_Heli_Light_01_F", 50000, "" },
+			{ "I_Heli_light_03_unarmed_F", 40000, ""}
 		};
 	};
 
@@ -403,6 +412,9 @@ class CfgVehicles {
             } },
             { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
+                        { "Medic", "med", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
             } }
 	    };
     };
@@ -461,6 +473,9 @@ class CfgVehicles {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
             } },
             { "White", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
+            { "Medic", "med", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             } },
             { "Police", "cop", {
@@ -730,9 +745,6 @@ class CfgVehicles {
 			{ "Red", "civ", {
 	                "#(argb,8,8,3)color(0.5,0.05,0.05,1)"
             } },
-			{ "White", "civ", {
-	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)" 
-            } },
             { "Yellow", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
             } },
@@ -747,6 +759,9 @@ class CfgVehicles {
             } },
             { "Sky Blue", "civ", {
             		"#(argb,8,8,3)color(0,0.1,0.3,1)"
+            } },
+            { "White", "med", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)" 
             } },
             { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
