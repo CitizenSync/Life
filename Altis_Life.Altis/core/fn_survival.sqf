@@ -108,7 +108,7 @@ while {true} do {
 		if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
 		if ((vehicle player) isKindOf "Air") then {
 			player action ["getOut", vehicle player];
-			hint parseText format ["<t color='#FF0000'><t size='1'>You cannot enter aircraft while carrying gold!</t></t>"];
+			hint parseText format ["<t color='#FF0000'><t size='1'>You cannot enter aircraft while carrying gold or bank bonds!</t></t>"];
 		};
 	};
 	uiSleep 1;
