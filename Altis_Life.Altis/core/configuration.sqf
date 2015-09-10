@@ -58,7 +58,9 @@ life_thirst = 100;
 life_hunger = 100;
 CASH = 0;
 life_istazed = false;
-
+life_god = false;
+life_frozen = false;
+life_markers = false;
 
 life_vehicles = [];
 
