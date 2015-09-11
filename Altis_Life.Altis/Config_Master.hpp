@@ -55,9 +55,9 @@ class Life_Settings {
 	impound_air = 850; //Price for impounding helicopters / planes
 
 	/* Seize Variables */
-	seize_car = 5000;
-	seize_boat = 5000;
-	seize_air = 5000;
+	seize_car = 950;
+	seize_boat = 650;
+	seize_air = 2450;
 
 	/* Car-shop Settings */
 	vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F" };
