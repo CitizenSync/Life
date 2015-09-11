@@ -2512,7 +2512,7 @@
 			<Italian>Sei stato automaticamente liberato per essere rimasto ammanettato troppo tempo</Italian>
 			<Portuguese>VocÃƒÂª foi solto automaticamente, devido ao tempo limite ter expirado.</Portuguese>
 		</Key>
-		<Key ID="STR_Cop_Retrained">
+		<Key ID="STR_Cop_Restrained">
 			<Original>You have been restrained by %1</Original>
 			<German>Du wurdest von %1 festgenommen</German>
 			<French>Vous avez ÃƒÂ©tÃƒÂ© menottÃƒÂ© par %1</French>
