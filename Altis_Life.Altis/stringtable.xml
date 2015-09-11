@@ -1639,6 +1639,24 @@
 			<Italian>Sei stato curato completamente.</Italian>
 			<Portuguese>Sua saude estÃƒÂ¡ perfeita</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_LowRank">
+			<Original>You are too low of a rank to use this option!</Original>
+		</Key>
+		<Key ID="STR_NOTF_Seizure">
+			<Original>%1 your %2 is being seized by the police!</Original>
+		</Key>
+		<Key ID="STR_NOTF_SeizureCancel">
+			<Original>Seizure has been canceled.</Original>
+		</Key>
+		<Key ID="STR_NOTF_SeizurePayout">
+			<Original>You have received %2 for seizing this %1.</Original>
+		</Key>
+		<Key ID="STR_NOTF_SeizedBy">
+			<Original>%2 your %3 has been seized by %1.</Original>
+		</Key>
+		<Key ID="STR_NOTF_Seizing">
+			<Original>Seizing Vehicle...</Original>
+		</Key>
 		<Key ID="STR_NOTF_BeingImpounded">
 			<Original>%1 your %2 is being impounded by the police.</Original>
 			<German>%1 dein %2 wird von der Polizei beschlagnahmt.</German>
