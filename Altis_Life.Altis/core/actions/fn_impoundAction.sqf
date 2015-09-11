@@ -6,7 +6,7 @@
 	Description:
 	Impounds the vehicle
 */
-private["_vehicle","_type","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_filters"];
+private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_filters"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _filters = ["Car","Air","Ship"];
 if(!((KINDOF_ARRAY(_vehicle,_filters)))) exitWith {};
@@ -31,7 +31,7 @@ _cP = 0.01;
 
 while{true} do {
 	sleep 0.09;
-	_cP = _cP + 0.01;
+	_cP = _cP + 0.004;
 	_progress progressSetPosition _cP;
 	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 	if(_cP >= 1) exitWith {};
