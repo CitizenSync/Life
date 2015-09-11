@@ -31,7 +31,7 @@ if(isNull _cop) exitWith {};
 
 if((player GVAR["surrender",FALSE])) then { player SVAR["surrender",FALSE,TRUE]; player switchMove ""; };
 
-titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
+titleText[format[localize "STR_Cop_Restrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
 				
 while {player GVAR  "restrained"} do {
 	if(vehicle player == player) then {
