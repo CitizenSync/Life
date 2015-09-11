@@ -480,6 +480,12 @@ class CfgVehicles {
             } },
             { "Police", "cop", {
                 "#(ai,64,64,1)Fresnel(1.3,7)"
+            } },
+            { "Airman", "cop", {
+                "textures\airHatch.jpg"
+            } },
+            { "PaintWarrior", "cop", {
+                "textures\JessHatch.jpg"
             } }
         };
     };
@@ -641,6 +647,9 @@ class CfgVehicles {
             } },
             { "White", "civ", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
+            } },
+            { "Airman", "cop", {
+                "textures\airSUV.jpg"
             } },
             { "Police", "cop", {
                 "textures\lapd_suv.paa"
