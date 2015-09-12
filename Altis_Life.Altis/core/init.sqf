@@ -69,6 +69,7 @@ switch (playerSide) do {
 	};
 };
 
+player setVariable["ziptied",false,true];
 player setVariable["restrained",false,true];
 player setVariable["Escorting",false,true];
 player setVariable["transporting",false,true];

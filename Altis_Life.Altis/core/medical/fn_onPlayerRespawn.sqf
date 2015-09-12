@@ -17,6 +17,7 @@ _containers = nearestObjects[getPosATL _corpse,["WeaponHolderSimulated"],5]; //F
 {deleteVehicle _x;} foreach _containers; //Delete the containers.
 
 //Set some vars on our new body.
+_unit SVAR ["ziptied",FALSE,TRUE];
 _unit SVAR ["restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["bloodBagged",FALSE,TRUE];

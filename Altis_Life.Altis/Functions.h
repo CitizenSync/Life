@@ -90,6 +90,7 @@ class Life_Client_Core
 		class putInCar {};
 		class stopEscorting {};
 		class restrainAction {};
+		class ziptieAction {};
 		class seizePlayerAction {};
 		class searchAction {};
 		class searchVehAction {};
@@ -106,6 +107,7 @@ class Life_Client_Core
 		class surrender {};
 		class robGas {};
 		class robBank {};
+		class unziptie {};
 	};
 	
 	class Housing
@@ -230,10 +232,12 @@ class Life_Client_Core
 		class knockoutAction {};
 		class robReceive {};
 		class robPerson {};
+		class civInteractionMenu {};
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
 		class freezePlayer {};
+		class ziptie {};
 	};
 	
 	class Vehicle

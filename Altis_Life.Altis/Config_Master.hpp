@@ -78,7 +78,7 @@ class Life_Settings {
 	sellArray[] = {
 	};
 
-	allowedSavedVirtualItems[] = { "bloodbag","defibrillator","pickaxe", "fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit", "storageSmall", "storageBig", "redgull", "coffee", "waterBottle", "apple", "peach", "tbacon", "donut", "rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled", "mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled", "sheepGrilled", "goatGrilled" };
+	allowedSavedVirtualItems[] = { "ziptie","bloodbag","defibrillator","pickaxe", "fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit", "storageSmall", "storageBig", "redgull", "coffee", "waterBottle", "apple", "peach", "tbacon", "donut", "rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled", "mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled", "sheepGrilled", "goatGrilled" };
 };
 
 //Virtual Items
@@ -96,6 +96,7 @@ class VirtualItems {
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 150000, -1, false, -1, "icons\ico_storageBig.paa")
+	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 2, 10, 3, false, -1, "")
 	
 	//Medical Supplies
 	VITEMMACRO(defibrillator, "STR_Item_Defibrillator", "defibrillator", 2, 3000, -1, false, -1, "")
@@ -195,12 +196,12 @@ class Licenses {
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
-		items[] = { "bloodbag","defibrillator","waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
+		items[] = { "ziptie","bloodbag","defibrillator","waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
 	};
 
 	class rebel {
 		name = "STR_Shops_Rebel";
-		items[] = { "bloodbag","defibrillator","waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+		items[] = { "ziptie","bloodbag","defibrillator","waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
 	};
 
 	class gang {

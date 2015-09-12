@@ -56,6 +56,8 @@ if(_curTarget isKindOf "House_F") exitWith {
 };
 
 if(!isPlayer _curTarget && side _curTarget == civilian) exitWith {closeDialog 0;}; //Bad side check?
+if(player distance _curTarget > 4 ) exitWith {closeDialog 0;}; // No one likes 1km un-restrains lel.
+
 _display = findDisplay 37400;
 _Btn1 = _display displayCtrl Btn1;
 _Btn2 = _display displayCtrl Btn2;
@@ -68,8 +70,13 @@ _Btn9 = _display displayCtrl Btn9;
 life_pInact_curTarget = _curTarget;
 
 //Set Unrestrain Button
+if((_curTarget getVariable["restrained",false])) then {
 _Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
 _Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
+} else {
+	_Btn1 ctrlSetText localize "STR_pInAct_unZiptie";
+	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unziptie; closeDialog 0;";
+};
 
 //Set Check Licenses Button
 _Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";

@@ -19,6 +19,10 @@ if((call life_fnc_nearATM) && {!dialog}) exitWith {
 	[] call life_fnc_atmMenu;
 };
 
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 3.5} OR (((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject[[20950,16856,0],"Land_i_Shop_01_V1_F"]) == _curTarget) OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
+	[_curTarget] call life_fnc_houseMenu;
+};
+
 if(isNull _curTarget) exitWith {
 	if(_isWater) then {
 		private "_fish";
@@ -40,10 +44,6 @@ if(!alive _curTarget && _curTarget isKindOf "Animal" && !(EQUAL((typeOf _curTarg
 	[_curTarget] call life_fnc_gutAnimal;
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR (((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject[[20950,16856,0],"Land_i_Shop_01_V1_F"]) == _curTarget) OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
-	[_curTarget] call life_fnc_houseMenu;
-};
-
 if(dialog) exitWith {}; //Don't bother when a dialog is open.
 if(vehicle player != player) exitWith {}; //He's in a vehicle, cancel!
 life_action_inUse = true;
@@ -54,18 +54,23 @@ life_action_inUse = true;
 	life_action_inUse = false;
 };
 
-//Check if it's a dead body.
+/*Check if it's a dead body.
 if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent]}) exitWith {
 	//Hotfix code by ins0
 	if(((playerSide == blufor && {(EQUAL(LIFE_SETTINGS(getNumber,"revive_cops"),1))}) || playerSide == independent) && {"Medikit" in (items player)}) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-};
+}; */
 
+if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
+	if(((_curTarget GVAR ["restrained",false]) || (_curTarget GVAR ["ziptied",false])) && !dialog && playerSide != west) then {
+		[_curTarget] call life_fnc_civInteractionMenu;
+	};
+};
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
-	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
+	if(((_curTarget GVAR ["restrained",false]) || (_curTarget GVAR ["ziptied",false])) && !dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 } else {
@@ -110,3 +115,4 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		};
 	};
 };
+

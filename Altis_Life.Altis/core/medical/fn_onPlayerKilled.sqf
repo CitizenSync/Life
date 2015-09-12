@@ -15,6 +15,7 @@ _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 //Set some vars
 _unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
 _unit SVAR ["name",profileName,TRUE]; //Set my name so they can say my name.
+_unit SVAR ["ziptied",FALSE,TRUE];
 _unit SVAR ["restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["bloodBagged",FALSE,TRUE];
