@@ -1798,11 +1798,14 @@
 			<Portuguese>NÃƒÂ£o existe um veÃƒÂ­culo por perto...</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_Restrained">
-			<Original>%1 was restrained by %2</Original>
+			<Original>%1 was restrained by %2.</Original>
 			<German>%1 wurde von %2 festgenommen</German>
 			<French>%1 a ÃƒÂ©tÃƒÂ© menottÃƒÂ© par %2</French>
 			<Italian>%1 ÃƒÂ¨ stato ammanettato da %2</Italian>
 			<Portuguese>%1 foi imobilizado por %2</Portuguese>
+		</Key>
+		<Key ID="STR_NOTF_ExcessiveR">
+			<Original>ATTENTION!!! -- %1 was automatically un-restrainted! They were restrained for 15 minutes! Pardon them immediately!</Original>
 		</Key>
 		<Key ID="STR_NOTF_Searching">
 			<Original>Searching...</Original>
@@ -1833,11 +1836,17 @@
 			<Portuguese>VocÃƒÂª jÃƒÂ¡ estÃƒÂ¡ executando uma aÃƒÂ§ÃƒÂ£o. Por favor espere atÃƒÂ© que ela acabe.</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_Unrestrain">
-			<Original>%1 was unrestrained by %2</Original>
+			<Original>%1 was unrestrained by %2.</Original>
 			<German>%1 wurde von %2 freigelassen</German>
 			<French>%1 a ÃƒÂ©tÃƒÂ© dÃƒÂ©menottÃƒÂ© par %2</French>
 			<Italian>%2 ha tolto le manette a %1</Italian>
 			<Portuguese>%1 foi liberado por %2</Portuguese>
+		</Key>
+		<Key ID="STR_NOTF_ZiptieCut">
+			<Original>%2 has cut the zip ties from %1</Original>
+		</Key>
+		<Key ID="STR_NOTF_CantUnrestrain">
+			<Original>You can't unrestrain this player because they are not %1</Original>
 		</Key>
 		<Key ID="STR_NOTF_Robbed">
 			<Original>%1 has robbed %2 for $%3</Original>
@@ -2140,6 +2149,15 @@
 			<French>%1 vous a assommÃƒÂ©.</French>
 			<Italian>%1 ti ha colpito stordendoti.</Italian>
 			<Portuguese>%1 nocauteou vocÃƒÂª.</Portuguese>
+		</Key>
+		<Key ID="STR_Civ_Exploit">
+			<Original>What you just tried doing is considered exploiting. Stop now.</Original>
+		</Key>
+		<Key ID="STR_Civ_Ziptied">
+			<Original>You have been ziptied by %1.</Original>
+		</Key>
+		<Key ID="STR_Civ_ExcessiveRestrain">
+			<Original>You have been released automatically for excessive restrainment time.</Original>
 		</Key>
 		<Key ID="STR_Civ_LicenseRemove_1">
 			<Original>You have lost all your motor vehicle licenses for vehicular manslaughter.</Original>
@@ -2513,7 +2531,7 @@
 			<Portuguese>VocÃƒÂª foi solto automaticamente, devido ao tempo limite ter expirado.</Portuguese>
 		</Key>
 		<Key ID="STR_Cop_Restrained">
-			<Original>You have been restrained by %1</Original>
+			<Original>You have been restrained by %1.</Original>
 			<German>Du wurdest von %1 festgenommen</German>
 			<French>Vous avez ÃƒÂ©tÃƒÂ© menottÃƒÂ© par %1</French>
 			<Italian>%1 ti ha tolto le manette</Italian>
@@ -2918,6 +2936,9 @@
 		</Key>
 	</Package>
 	<Package name="Life_Items">
+		<Key ID="STR_Item_Ziptie">
+			<Original>Ziptie</Original>
+		</Key>
 		<Key ID="STR_Item_Cannabis">
 			<Original>Cannabis</Original>
 			<German>Kannabis</German>
@@ -4101,19 +4122,22 @@
 		</Key>
 	</Package>
 		<Package name="Player_Interaction">
-		<Key ID="STR_pInAct_Seize">
-			<Original>Seize Items</Original>
-			<German>Seize Artikel</German>
-			<French>Seize Articles</French>
-			<Italian>cogliere Articoli</Italian>
-			<Portuguese>Seize Itens</Portuguese>
-		</Key>
 		<Key ID="STR_pInAct_Title">
 			<Original>Player Interaction Menu</Original>
 			<German>SpielerinteraktionsmenÃƒÂ¼</German>
 			<French>Menu Interaction du Joueur</French>
 			<Italian>Menu d'interazione Giocatore</Italian>
 			<Portuguese>Menu de InteraÃƒÂ§ÃƒÂ£o do Jogador</Portuguese>
+		</Key>
+		<Key ID="STR_pInAct_unZiptie">
+			<Original>Un-Ziptie</Original>
+		</Key>
+		<Key ID="STR_pInAct_Seize">
+			<Original>Seize Items</Original>
+			<German>Seize Artikel</German>
+			<French>Seize Articles</French>
+			<Italian>cogliere Articoli</Italian>
+			<Portuguese>Seize Itens</Portuguese>
 		</Key>
 		<Key ID="STR_pInAct_PutInCar">
 			<Original>Put in vehicle</Original>
