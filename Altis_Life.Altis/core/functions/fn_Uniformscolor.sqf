@@ -16,11 +16,11 @@ if(side player == west) then {
 	/*/ Basic cop uniform.
 	if (uniform player == "U_B_CombatUniform_mcam" && (FETCH_CONST(life_coplevel) == 1)) then {
 		player setObjectTextureGlobal [0, "textures\police\pcso_uniform.paa"];
-	};
+	};*/
 	// Basic cop uniform.
 	if (uniform player == "U_B_CombatUniform_mcam" && (FETCH_CONST(life_coplevel) == 2 OR FETCH_CONST(life_coplevel) == 3)) then {
-		player setObjectTextureGlobal [0, "textures\police\police_low.paa"];
-	};*/
+		player setObjectTextureGlobal [0, "textures\policeAir.paa"];
+	};
 	// Basic cop uniform.
 	if (uniform player == "U_B_CombatUniform_mcam" && (FETCH_CONST(life_coplevel) == 4 OR FETCH_CONST(life_coplevel) == 5 OR FETCH_CONST(life_coplevel) == 6 OR FETCH_CONST(life_coplevel) == 7)) then {
 		player setObjectTextureGlobal [0, "textures\policeAirman.paa"];
