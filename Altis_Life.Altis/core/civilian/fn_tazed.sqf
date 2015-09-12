@@ -36,7 +36,7 @@ if(_shooter isKindOf "Man" && alive player) then {
 		[[0,"STR_NOTF_Tazed",true,[profileName, _shooter GVAR ["realname",name _shooter]]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 		_unit attachTo [_obj,[0,0,0]];
 		disableUserInput true;
-		sleep 15;
+		sleep 20;
 		[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] call life_fnc_MP;
 		if(!(player GVAR ["Escorting",false])) then {
 			detach player;
