@@ -96,11 +96,11 @@ class VirtualItems {
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 150000, -1, false, -1, "icons\ico_storageBig.paa")
-	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 2, 10, 3, false, -1, "")
+	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 2, 10, 3, false, -1, "icons\ico_ziptie.paa")
 	
 	//Medical Supplies
-	VITEMMACRO(defibrillator, "STR_Item_Defibrillator", "defibrillator", 2, 3000, -1, false, -1, "")
-	VITEMMACRO(bloodbag, "STR_Item_Bloodbag", "bloodbag", 2, 500, -1, false, -1, "")
+	VITEMMACRO(defibrillator, "STR_Item_Defibrillator", "defibrillator", 2, 3000, -1, false, -1, "icons\ico_defib.paa")
+	VITEMMACRO(bloodbag, "STR_Item_Bloodbag", "bloodbag", 2, 500, -1, false, -1, "icons\ico_bloodBag.paa")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 7, -1, -1, false, -1, "")
@@ -132,7 +132,7 @@ class VirtualItems {
 	VITEMMACRO(waterBottle, "STR_Item_WaterBottle", "waterBottle", 1, 10, 5, false, 100, "icons\ico_waterBottle.paa")
 
 	//Food
-	VITEMMACRO(apple, "STR_Item_Apple", "apple", 1, 65, 50, false, 10, "icons\food.paa")
+	VITEMMACRO(apple, "STR_Item_Apple", "apple", 1, 65, 50, false, 10, "icons\apple.paa")
 	VITEMMACRO(peach, "STR_Item_Peach", "peach", 1, 68, 55, false, 10, "icons\food.paa")
 	VITEMMACRO(tbacon, "STR_Item_TBacon", "tbacon", 1, 75, 25, false, 40, "icons\ico_tbacon.paa")
 	VITEMMACRO(donut, "STR_Item_Donuts", "donut", 1, 120, 60, false, 30, "icons\food.paa")

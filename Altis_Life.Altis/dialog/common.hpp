@@ -22,18 +22,18 @@ class Life_Checkbox
 	h = 1 * GUI_GRID_CENTER_H; // Height
 
 	//Colors
-	color[] = { 1, 1, 1, 0.7 }; // Texture color
-	colorFocused[] = { 1, 1, 1, 1 }; // Focused texture color
-	colorHover[] = { 1, 1, 1, 1 }; // Mouse over texture color
-	colorPressed[] = { 1, 1, 1, 1 }; // Mouse pressed texture color
-	colorDisabled[] = { 1, 1, 1, 0.2 }; // Disabled texture color
+	color[] = { 0.15,0.68,0.89,1 }; // Texture color
+	colorFocused[] = { 0,0.66,1,1 }; // Focused texture color
+	colorHover[] = { 0,0.66,1,1 }; // Mouse over texture color
+	colorPressed[] = { 0.15,0.68,0.89,1 }; // Mouse pressed texture color
+	colorDisabled[] = { 0.28,0.28,0.28,1 }; // Disabled texture color
 
 	//Background colors
-	colorBackground[] = { 0, 0, 0, 0 }; // Fill color
-	colorBackgroundFocused[] = { 0, 0, 0, 0 }; // Focused fill color
-	colorBackgroundHover[] = { 0, 0, 0, 0 }; // Mouse hover fill color
-	colorBackgroundPressed[] = { 0, 0, 0, 0 }; // Mouse pressed fill color
-	colorBackgroundDisabled[] = { 0, 0, 0, 0 }; // Disabled fill color
+	colorBackground[] = { 0.19,0.19,0.19,1 }; // Fill color
+	colorBackgroundFocused[] = { 0.19,0.19,0.19,1 }; // Focused fill color
+	colorBackgroundHover[] = { 0.19,0.19,0.19,1 }; // Mouse hover fill color
+	colorBackgroundPressed[] = { 0.19,0.19,0.19,1 }; // Mouse pressed fill color
+	colorBackgroundDisabled[] = { 0.19,0.19,0.19,1 }; // Disabled fill color
 
 	//Textures
 	textureChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";		//Texture of checked CheckBox.
@@ -62,9 +62,9 @@ class Life_Checkbox
 
 class Life_RscScrollBar
 {
-	color[] = {1,1,1,0.6};
-	colorActive[] = {1,1,1,1};
-	colorDisabled[] = {1,1,1,0.3};
+	color[] = {0.19,0.19,0.19,1};
+	colorActive[] = {0.15,0.68,0.89,1};
+	colorDisabled[] = {0.28,0.28,0.28,1};
 	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
 	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
@@ -133,13 +133,13 @@ class Life_RscListNBox
 	shadow = 0;
 	font = "PuristaMedium";
 	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	color[] = {0.95,0.95,0.95,1};
+	color[] = {0.19,0.19,0.19,1};
 	colorText[] = {1,1,1,1.0};
-	colorDisabled[] = {1,1,1,0.25};
-	colorScrollbar[] = {0.95,0.95,0.95,1};
+	colorDisabled[] = {0.28,0.28,0.28,1};
+	colorScrollbar[] = {0.19,0.19,0.19,1};
 	colorSelect[] = {0,0,0,1};
 	colorSelect2[] = {0,0,0,1};
-	colorSelectBackground[] = {0.8,0.8,0.8,1};
+	colorSelectBackground[] = {0.28,0.28,0.28,1};
 	colorSelectBackground2[] = {1,1,1,0.5};
 	colorPicture[] = {1,1,1,1};
 	colorPictureSelected[] = {1,1,1,1};
@@ -544,7 +544,7 @@ class Life_RscProgress
 	shadow = 2;
 	colorFrame[] = {0, 0, 0, 1};
 	colorBackground[] = {0,0,0,0.7};
-	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+	colorBar[] = {0.15,0.68,0.89,1};
 };
 
 class Life_RscListBox 
@@ -558,7 +558,7 @@ class Life_RscListBox
 	colorSelect[] = {1, 1, 1, 1};
 	colorText[] = {1, 1, 1, 1};
 	colorBackground[] = {0.28,0.28,0.28,0.28};
-	colorSelect2[] = {1, 1, 1, 1};
+	colorSelect2[] = {0.15,0.68,0.89,1 };
 	colorSelectBackground[] = {0.95, 0.95, 0.95, 0.5};
 	colorSelectBackground2[] = {1, 1, 1, 0.5};
 	colorScrollbar[] = {0.2, 0.2, 0.2, 1};
@@ -608,8 +608,8 @@ class Life_RscEdit {
 
 class Life_RscSlider {
 	h = 0.025;
-	color[] = {1, 1, 1, 0.8};
-	colorActive[] = {1, 1, 1, 1};
+	color[] = {0.19,0.19,0.19,1};
+	colorActive[] = {0.15,0.68,0.89,1};
 };
 
 class life_RscXSliderH 

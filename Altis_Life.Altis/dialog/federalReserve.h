@@ -9,7 +9,7 @@ class Federal_Safe
 	{
 		class RscTitleBackground : Life_RscText
 		{
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -19,7 +19,7 @@ class Federal_Safe
 		
 		class RscBackground : Life_RscText
 		{
-			colorBackground[] = {0, 0, 0, 0.7};
+			colorBackground[] = {0.19,0.19,0.19,1};
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
@@ -29,7 +29,7 @@ class Federal_Safe
 		
 		class RscTitleText : Life_RscTitle
 		{
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
 			idc = 3501;
 			text = "";
 			x = 0.1;
@@ -48,7 +48,7 @@ class Federal_Safe
 		class RscTrunkText : Life_RscText
 		{
 			idc = -1;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = {0.19,0.19,0.19,1};
 			text = "$STR_Trunk_TInventory";
 			sizeEx = 0.04;
 			
@@ -82,7 +82,7 @@ class Federal_Safe
 		{
 			idc = -1;
 			text = "$STR_Trunk_Take";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
 			onButtonClick = "[] call life_fnc_safeTake;";
 			x = 0.19; y = 0.78;
 			w = (6.25 / 40);

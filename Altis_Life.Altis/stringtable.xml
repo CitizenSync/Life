@@ -492,21 +492,21 @@
 			<Portuguese>Mensagem a enviar:</Portuguese>
 		</Key>
 		<Key ID="STR_CELL_TextMSGBtn">
-			<Original>Text Message:</Original>
+			<Original>Send to Player:</Original>
 			<German>Nachricht:</German>
 			<French>Text Message:</French>
 			<Italian>Msg Giocatore:</Italian>
 			<Portuguese>Mensagem:</Portuguese>
 		</Key>
 		<Key ID="STR_CELL_TextPolice">
-			<Original>Text Police</Original>
+			<Original>Send to Police</Original>
 			<German>An die Polizei</German>
 			<French>Text Police</French>
 			<Italian>Msg Polizia</Italian>		
 			<Portuguese>PolÃƒÂ­cia</Portuguese>
 		</Key>
 		<Key ID="STR_CELL_TextAdmins">
-			<Original>Text Admins</Original>
+			<Original>Send to Admins</Original>
 			<German>An die Admins</German>
 			<French>Text Admins</French>
 			<Italian>Msg Admin</Italian>

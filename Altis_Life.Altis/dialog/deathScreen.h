@@ -14,7 +14,7 @@ class DeathScreen
 		class MedicsOnline : Life_RscText
 		{
 			idc = 7304;
-			colorBackground[] = {0,0,0,0};
+			colorBackground[] = {1,1,1,1};
 			text = "Medics Online: 1";
 			x = 0.000874975 * safezoneW + safezoneX;
 			y = 0.0556 * safezoneH + safezoneY;
@@ -25,7 +25,7 @@ class DeathScreen
 		class MedicsNearby : Life_RscText
 		{
 			idc = 7305;
-			colorBackground[] = {0,0,0,0};
+			colorBackground[] = {1,1,1,1};
 			text = "Medics Nearby: No";
 			x = 0.00190622 * safezoneW + safezoneX;
 			y = 0.0776 * safezoneH + safezoneY;
@@ -42,7 +42,10 @@ class DeathScreen
 			h = (1 / 25);
 			text = "Respawn";
 			onButtonClick = "closeDialog 0; life_respawned = true; [] call life_fnc_spawnMenu;";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.7};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
+			colorBackgroundFocused[] = {0.15,0.68,0.89,1}; // Focused fill color
+			colorBackgroundHover[] = {0.15,0.68,0.89,1}; // Mouse hover fill color
+			colorBackgroundPressed[] = { 0.15,0.68,0.89,1 };
 			class Attributes 
 			{
 				align = "center";
@@ -52,13 +55,16 @@ class DeathScreen
 		class MedicBtn : Life_RscButtonMenu
 		{
 			idc = 7303;
+			colorBackground[] = {0.67,0.01,0,1};
+			colorBackgroundFocused[] = {0.67,0.01,0,1}; // Focused fill color
+			colorBackgroundHover[] = {0.67,0.01,0,1}; // Mouse hover fill color
+			colorBackgroundPressed[] = {0.67,0.01,0,1};
 			x = 0.9 * safezoneW + safezoneX;
 			y = 0.0292 * safezoneH + safezoneY;
 			w = (9 / 40);
 			h = (1 / 25);
-			onButtonClick = "[] call life_fnc_requestMedic;";
 			text = "Request Medic";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.7};
+			onButtonClick = "[] call life_fnc_requestMedic;";
 			class Attributes 
 			{
 				align = "center";

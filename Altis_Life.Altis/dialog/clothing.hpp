@@ -7,7 +7,7 @@ class Life_Clothing {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
 			idc = -1;
 			x = 0.0821059 * safezoneW + safezoneX;
 			y = 0.212176 * safezoneH + safezoneY;
@@ -16,7 +16,7 @@ class Life_Clothing {
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
+			colorBackground[] = { 0.19,0.19,0.19,1 };
 			idc = -1;
 			x = 0.0822359 * safezoneW + safezoneX;
 			y = 0.236099 * safezoneH + safezoneY;
@@ -29,12 +29,12 @@ class Life_Clothing {
 	{
 		class Title : Life_RscTitle 
 		{
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = { 0.15,0.68,0.89,1 };
 			idc = 3103;
 			text = "";
 			x = 0.0821059 * safezoneW + safezoneX;
 			y = 0.212176 * safezoneH + safezoneY;
-			w = 0.6;
+			w = 0.3;
 			h = (1 / 25);
 		};
 		
@@ -78,7 +78,7 @@ class Life_Clothing {
 		class FilterList : Life_RscCombo
 		{
 			idc = 3105;
-			colorBackground[] = {0,0,0,0.7};
+			colorBackground[] = { 0.19,0.19,0.19,1 };
 			onLBSelChanged  = "_this call life_fnc_clothingFilter";
 			x = 0.0822359 * safezoneW + safezoneX;
 			y = 0.468 * safezoneH + safezoneY;

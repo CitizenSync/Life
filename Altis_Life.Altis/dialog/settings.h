@@ -9,7 +9,7 @@ class SettingsMenu
 	{
 		class RscTitleBackground : life_RscText
 		{
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {0.15,0.68,0.89,1};
 			idc = -1;
 			x = 0.3;
 			y = 0.2;
@@ -19,7 +19,7 @@ class SettingsMenu
 		
 		class RscMainBackground : life_RscText
 		{
-			colorBackground[] = {0,0,0,0.7};
+			colorBackground[] = {0.19,0.19,0.19,1};
 			idc = -1;
 			x = 0.3;
 			y = 0.2 + (11 / 250);
@@ -31,7 +31,7 @@ class SettingsMenu
 		{
 			idc = -1;
 			text = "$STR_SM_PlayerTags";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			colorBackground[] = {0.15,0.68,0.89,1};
 			
 			x = 0.30;
 			y = 0.43;
